@@ -22,7 +22,7 @@ body::before,body::after{content:"";position:fixed;z-index:-1;border-radius:50%;
 body::before{width:380px;height:380px;background:var(--rose-l);top:-80px;right:-80px}
 body::after{width:420px;height:420px;background:var(--lilas-l);bottom:-120px;left:-120px}
 body::before,body::after{z-index:-2}
-.fond{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.6;
+.fond{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.5;
   background:linear-gradient(rgba(255,248,245,.35),rgba(255,248,245,.35)),url("fond.png") center top/cover no-repeat;
   -webkit-mask-image:linear-gradient(to bottom,#000 55%,transparent 100%);mask-image:linear-gradient(to bottom,#000 55%,transparent 100%);
   will-change:opacity}
@@ -321,7 +321,7 @@ footer{text-align:center;padding:2rem 1rem 3rem;color:var(--doux);font-size:.82r
 
 <script>
 (function(){
-  var fond=document.querySelector('.fond'),max=.6,ticking=false;
+  var fond=document.querySelector('.fond'),max=.5,ticking=false;
   function maj(){
     var p=Math.min(window.scrollY/(window.innerHeight*0.7),1);
     fond.style.opacity=(max*(1-p)).toFixed(3);
