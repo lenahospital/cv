@@ -22,9 +22,9 @@ body::before,body::after{content:"";position:fixed;z-index:-1;border-radius:50%;
 body::before{width:380px;height:380px;background:var(--rose-l);top:-80px;right:-80px}
 body::after{width:420px;height:420px;background:var(--lilas-l);bottom:-120px;left:-120px}
 body::before,body::after{z-index:-2}
-.fond{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.4;
+.fond{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.6;
   background:linear-gradient(rgba(255,248,245,.35),rgba(255,248,245,.35)),url("fond.png") center top/cover no-repeat;
-  -webkit-mask-image:linear-gradient(to bottom,#000 55%,transparent 100%);mask-image:linear-gradient(to bottom,#000 75%,transparent 100%);
+  -webkit-mask-image:linear-gradient(to bottom,#000 55%,transparent 100%);mask-image:linear-gradient(to bottom,#000 55%,transparent 100%);
   will-change:opacity}
 a{color:inherit;text-decoration:none}
 h1,h2,h3{font-family:'Playfair Display',serif}
@@ -124,8 +124,8 @@ footer{text-align:center;padding:2rem 1rem 3rem;color:var(--doux);font-size:.82r
 
 <header class="hero" id="top">
   <div class="photo">
-    <!-- Dépose ta photo à côté de ce fichier sous le nom photo.jpg -->
-    <img src="photo.jpg" alt="Portrait de Léna Hospital" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <!-- Dépose ta photo à côté de ce fichier sous le nom photo.png -->
+    <img src="photo.png" alt="Portrait de Léna Hospital" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
     <div class="mono">LH</div>
   </div>
   <div>
@@ -321,7 +321,7 @@ footer{text-align:center;padding:2rem 1rem 3rem;color:var(--doux);font-size:.82r
 
 <script>
 (function(){
-  var fond=document.querySelector('.fond'),max=.4,ticking=false;
+  var fond=document.querySelector('.fond'),max=.6,ticking=false;
   function maj(){
     var p=Math.min(window.scrollY/(window.innerHeight*0.7),1);
     fond.style.opacity=(max*(1-p)).toFixed(3);
