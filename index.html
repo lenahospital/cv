@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Léna Hospital — Étudiante STAPS · Cyclisme</title>
+<meta name="description" content="CV numérique de Léna Hospital — étudiante en STAPS CMI Ingénierie à Luminy (Marseille), bachelière mention Très Bien, passionnée de sport et d’animaux.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌸</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --rose:#f7a6c4; --rose-d:#e0558b; --rose-l:#fde4ee; --lilas:#c9b6f2; --lilas-l:#efe8fd;
+  --creme:#fff8f5; --texte:#4a3340; --doux:#8a6f7d; --blanc:#fff;
+  --ombre:0 10px 30px rgba(224,85,139,.15);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Quicksand',system-ui,sans-serif;color:var(--texte);background:var(--creme);line-height:1.6;overflow-x:hidden}
+body::before,body::after{content:"";position:fixed;z-index:-1;border-radius:50%;filter:blur(70px);opacity:.55}
+body::before{width:380px;height:380px;background:var(--rose-l);top:-80px;right:-80px}
+body::after{width:420px;height:420px;background:var(--lilas-l);bottom:-120px;left:-120px}
+body::before,body::after{z-index:-2}
+.fond{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.4;
+  background:linear-gradient(rgba(255,248,245,.35),rgba(255,248,245,.35)),url("fond.png") center top/cover no-repeat;
+  -webkit-mask-image:linear-gradient(to bottom,#000 55%,transparent 100%);mask-image:linear-gradient(to bottom,#000 55%,transparent 100%);
+  will-change:opacity}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:'Playfair Display',serif}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem;padding:.9rem 5vw;background:rgba(255,248,245,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--rose-l)}
+.logo{font-family:'Playfair Display',serif;font-style:italic;font-weight:600;font-size:1.3rem;color:var(--rose-d)}
+nav ul{display:flex;gap:1.2rem;list-style:none;flex-wrap:wrap}
+nav ul a{font-size:.8rem;font-weight:700;letter-spacing:.12em;color:var(--doux);transition:color .2s}
+nav ul a:hover{color:var(--rose-d)}
+
+/* HERO */
+.hero{display:grid;grid-template-columns:auto 1fr;gap:3rem;align-items:center;max-width:1050px;margin:0 auto;padding:5rem 5vw 4rem}
+.photo{position:relative;width:240px;height:300px}
+.photo::before{content:"";position:absolute;inset:-12px;border-radius:50% 50% 45% 55%/55% 45% 55% 45%;background:linear-gradient(135deg,var(--rose),var(--lilas));transform:rotate(-6deg)}
+.photo img,.photo .mono{position:relative;width:100%;height:100%;object-fit:cover;border-radius:46% 54% 50% 50%/50% 46% 54% 50%;border:5px solid var(--blanc);box-shadow:var(--ombre);background:var(--rose-l)}
+.photo .mono{display:none;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:4rem;color:var(--rose-d)}
+.tag{display:inline-block;font-size:.75rem;font-weight:700;letter-spacing:.18em;color:var(--rose-d);background:var(--rose-l);padding:.35rem .9rem;border-radius:99px;margin-bottom:1rem}
+.hero h1{font-size:clamp(2.6rem,7vw,4.6rem);line-height:1.05;background:linear-gradient(90deg,var(--rose-d),#a98be0);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero h2{font-family:'Quicksand',sans-serif;font-weight:600;font-size:1.2rem;color:var(--doux);margin:.6rem 0 1rem}
+.hero p{max-width:540px;color:var(--texte)}
+.btns{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.6rem}
+.btn{padding:.75rem 1.5rem;border-radius:99px;font-weight:700;font-size:.9rem;letter-spacing:.04em;transition:transform .2s,box-shadow .2s}
+.btn.plein{background:linear-gradient(90deg,var(--rose-d),#c77dd8);color:#fff;box-shadow:var(--ombre)}
+.btn.vide{border:2px solid var(--rose);color:var(--rose-d);background:var(--blanc)}
+.btn:hover{transform:translateY(-3px)}
+.badges{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1.4rem}
+.badge{background:var(--blanc);border:1.5px solid var(--rose-l);border-radius:99px;padding:.3rem .9rem;font-size:.82rem;font-weight:600;color:var(--doux)}
+
+/* SECTIONS */
+section{max-width:1050px;margin:0 auto;padding:4rem 5vw}
+.kicker{font-size:.8rem;font-weight:700;letter-spacing:.2em;color:var(--rose-d)}
+section>h2{font-size:clamp(1.8rem,4vw,2.6rem);margin:.3rem 0 2.2rem}
+section>h2::after{content:" ✿";color:var(--rose);font-size:.7em}
+.grille{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.4rem}
+.carte{background:var(--blanc);border-radius:26px;padding:1.7rem;box-shadow:var(--ombre);border:1.5px solid var(--rose-l);transition:transform .25s}
+.carte:hover{transform:translateY(-5px)}
+.carte .num{font-size:.75rem;font-weight:700;letter-spacing:.18em;color:var(--lilas)}
+.carte h3{font-size:1.25rem;margin:.3rem 0 .5rem;color:var(--rose-d)}
+.carte>p{color:var(--doux);font-size:.93rem;margin-bottom:.8rem}
+.carte ul{list-style:none}
+.carte li{position:relative;padding-left:1.4rem;margin:.4rem 0;font-size:.92rem}
+.carte li::before{content:"♡";position:absolute;left:0;color:var(--rose)}
+
+/* TIMELINE */
+.timeline{position:relative;padding-left:2rem}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:3px;border-radius:3px;background:linear-gradient(var(--rose),var(--lilas))}
+.etape{position:relative;background:var(--blanc);border-radius:22px;padding:1.3rem 1.6rem;margin-bottom:1.3rem;box-shadow:var(--ombre);border:1.5px solid var(--rose-l)}
+.etape::before{content:"";position:absolute;left:-2.05rem;top:1.6rem;width:17px;height:17px;border-radius:50%;background:var(--blanc);border:4px solid var(--rose-d)}
+.etape.star{background:linear-gradient(135deg,#fff,var(--rose-l))}
+.date{font-size:.78rem;font-weight:700;letter-spacing:.14em;color:var(--rose-d)}
+.etape h3{font-size:1.2rem;margin:.15rem 0 .2rem}
+.lieu{color:var(--doux);font-weight:600;font-size:.9rem}
+.etape ul{list-style:none;margin-top:.6rem}
+.etape li{position:relative;padding-left:1.3rem;margin:.3rem 0;font-size:.92rem}
+.etape li::before{content:"✦";position:absolute;left:0;color:var(--lilas);font-size:.8rem}
+.note{display:inline-block;margin:.5rem .5rem 0 0;background:var(--lilas-l);color:#6d54b0;padding:.2rem .8rem;border-radius:99px;font-size:.82rem;font-weight:700}
+
+/* MATRICE */
+.matrice .carte h3{display:flex;flex-direction:column;gap:.1rem}
+.matrice .carte h3 small{font-family:'Quicksand',sans-serif;font-size:.78rem;font-weight:600;color:var(--doux);letter-spacing:.06em}
+.niveau{display:flex;justify-content:space-between;font-size:.92rem;font-weight:600;margin-top:.6rem}
+.barre{height:8px;background:var(--rose-l);border-radius:8px;margin-top:.25rem;overflow:hidden}
+.barre i{display:block;height:100%;border-radius:8px;background:linear-gradient(90deg,var(--rose),var(--lilas))}
+
+/* CITATION + CONTACT */
+blockquote{margin:2.5rem 0 0;padding:1.6rem 2rem;border-radius:26px;background:linear-gradient(135deg,var(--rose-l),var(--lilas-l));font-family:'Playfair Display',serif;font-style:italic;font-size:1.2rem;text-align:center;color:var(--rose-d)}
+.contact{background:linear-gradient(135deg,var(--rose-l),var(--lilas-l));border-radius:34px;text-align:center;padding:3rem 1.5rem;margin:1rem auto 3rem;max-width:900px}
+.contact h2{font-size:2rem}
+.contact p{color:var(--doux);margin:.5rem 0 1.6rem}
+.liens{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.liens a{background:var(--blanc);border-radius:99px;padding:.8rem 1.6rem;font-weight:700;box-shadow:var(--ombre);transition:transform .2s}
+.liens a:hover{transform:translateY(-3px);color:var(--rose-d)}
+footer{text-align:center;padding:2rem 1rem 3rem;color:var(--doux);font-size:.82rem;letter-spacing:.08em}
+
+@media(max-width:720px){
+  .hero{grid-template-columns:1fr;text-align:center;justify-items:center;padding-top:3rem}
+  .btns,.badges{justify-content:center}
+  nav{justify-content:center}
+}
+</style>
+</head>
+<body>
+
+<div class="fond" aria-hidden="true"></div>
+
+<nav>
+  <a class="logo" href="#top">Léna Hospital</a>
+  <ul>
+    <li><a href="#profil">PROFIL</a></li>
+    <li><a href="#parcours">PARCOURS</a></li>
+    <li><a href="#competences">COMPÉTENCES</a></li>
+    <li><a href="#passions">PASSIONS</a></li>
+    <li><a href="#contact">CONTACT</a></li>
+  </ul>
+</nav>
+
+<header class="hero" id="top">
+  <div class="photo">
+    <!-- Dépose ta photo à côté de ce fichier sous le nom photo.jpg -->
+    <img src="photo.jpg" alt="Portrait de Léna Hospital" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="mono">LH</div>
+  </div>
+  <div>
+    <span class="tag">✨ ÉTUDIANTE · SPORTIVE · BACHELIÈRE MENTION TRÈS BIEN</span>
+    <h1>Léna HOSPITAL</h1>
+    <h2>Étudiante en STAPS CMI Ingénierie · Cyclisme</h2>
+    <p>Sportive passionnée, curieuse de sciences et d’animaux. Après un bac mention Très Bien, je poursuis à Luminy (Marseille) un cursus mêlant sport, sciences et ingénierie, et je me consacre aujourd’hui au vélo avec mon club de l’UCPG.</p>
+    <div class="btns">
+      <a class="btn plein" href="#parcours">Découvrir mon parcours</a>
+      <a class="btn vide" href="#contact">Me contacter</a>
+    </div>
+    <div class="badges">
+      <span class="badge">🎓 Bac mention Très Bien</span>
+      <span class="badge">🚴‍♀️ UCPG</span>
+      <span class="badge">🐾 Passionnée d’animaux</span>
+    </div>
+  </div>
+</header>
+
+<section id="profil">
+  <div class="kicker">01 / PROFIL</div>
+  <h2>Sport, sciences et engagement.</h2>
+  <div class="grille">
+    <article class="carte">
+      <div class="num">01 — ÉTUDES</div>
+      <h3>Formation</h3>
+      <p>Un parcours scientifique tourné vers le sport.</p>
+      <ul>
+        <li>STAPS option CMI Ingénierie, Luminy (Marseille 9e)</li>
+        <li>Baccalauréat général, mention Très Bien</li>
+        <li>Spécialités SVT, Physique-Chimie, Mathématiques</li>
+        <li>Brevet des collèges, mention Très Bien</li>
+      </ul>
+    </article>
+    <article class="carte">
+      <div class="num">02 — SPORT</div>
+      <h3>Vélo & Triathlon</h3>
+      <p>Le sport au cœur de mon quotidien.</p>
+      <ul>
+        <li>Cyclisme au sein du club de l’UCPG</li>
+        <li>Triathlon : étape du Tour de France jeunes 2024</li>
+        <li>Encadrante bénévole en club de triathlon (D3)</li>
+        <li>BF1 – encadrement sportif</li>
+      </ul>
+    </article>
+    <article class="carte">
+      <div class="num">03 — ENGAGEMENTS</div>
+      <h3>Vie associative</h3>
+      <p>S’impliquer et transmettre.</p>
+      <ul>
+        <li>Conseil des Jeunes de la Ligue PACA de Triathlon (2023–2024)</li>
+        <li>Service National Universel (SNU) – SDIS 05</li>
+        <li>PSC1 – premiers secours</li>
+        <li>Déléguée de classe en 3e et en seconde</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<section id="parcours">
+  <div class="kicker">02 / PARCOURS</div>
+  <h2>Un chemin tracé pas à pas.</h2>
+  <div class="timeline">
+
+    <div class="etape star">
+      <div class="date">DEPUIS SEPTEMBRE 2026</div>
+      <h3>STAPS · option CMI Ingénierie</h3>
+      <div class="lieu">Campus de Luminy — Marseille (9e arrondissement)</div>
+      <ul>
+        <li>Cursus Master en Ingénierie associé à la licence STAPS</li>
+        <li>Sport, sciences et ingénierie réunis</li>
+      </ul>
+    </div>
+
+    <div class="etape star">
+      <div class="date">DEPUIS SEPTEMBRE 2026</div>
+      <h3>Cyclisme · UCPG</h3>
+      <div class="lieu">Club de l’UCPG</div>
+      <ul>
+        <li>Je me consacre désormais au vélo avec mon club</li>
+      </ul>
+    </div>
+
+    <div class="etape star">
+      <div class="date">2026</div>
+      <h3>Baccalauréat général — Mention Très Bien</h3>
+      <div class="lieu">Lycée Honoré-Romane</div>
+      <ul><li>Spécialités SVT, Physique-Chimie, Mathématiques</li></ul>
+    </div>
+
+    <div class="etape">
+      <div class="date">2025</div>
+      <h3>Baccalauréat de français</h3>
+      <div class="lieu">Épreuves anticipées</div>
+      <span class="note">Écrit : 20 / 20</span><span class="note">Oral : 19 / 20</span>
+    </div>
+
+    <div class="etape">
+      <div class="date">DEPUIS 2023</div>
+      <h3>Encadrante bénévole · Club de triathlon (niveau D3)</h3>
+      <ul>
+        <li>Organisation de compétitions</li>
+        <li>Encadrement des jeunes</li>
+        <li>Gestion du matériel, échauffements</li>
+      </ul>
+    </div>
+
+    <div class="etape">
+      <div class="date">ANNÉE SCOLAIRE 2022–2023</div>
+      <h3>Stages d’observation</h3>
+      <ul>
+        <li><strong>SDIS 05</strong></li>
+        <li><strong>Kinésithérapie (5 jours)</strong> : observation des soins et techniques</li>
+        <li><strong>Maître-nageur (5 jours)</strong> : aide aux séances d’apprentissage, sensibilisation à la sécurité aquatique</li>
+      </ul>
+    </div>
+
+    <div class="etape">
+      <div class="date">2023</div>
+      <h3>Brevet des collèges — Mention Très Bien</h3>
+      <div class="lieu">Collège Fontreyne</div>
+    </div>
+
+  </div>
+</section>
+
+<section id="competences" class="matrice">
+  <div class="kicker">03 / COMPÉTENCES</div>
+  <h2>Mes atouts.</h2>
+  <div class="grille">
+    <article class="carte">
+      <h3>Qualités <small>SAVOIR-ÊTRE</small></h3>
+      <ul>
+        <li>Souriante, impliquée, sérieuse</li>
+        <li>Volontaire et esprit d’équipe</li>
+        <li>Sens des responsabilités</li>
+      </ul>
+    </article>
+    <article class="carte">
+      <h3>Sport & sécurité <small>DIPLÔMES</small></h3>
+      <ul>
+        <li>BF1 – Brevet Fédéral de niveau 1</li>
+        <li>PSC1 – Premiers secours</li>
+        <li>Encadrement de jeunes sportifs</li>
+      </ul>
+    </article>
+    <article class="carte">
+      <h3>Langues <small>NIVEAU</small></h3>
+      <div class="niveau"><span>Anglais</span><span>A2–B1</span></div>
+      <div class="barre"><i style="width:55%"></i></div>
+      <div class="niveau"><span>Italien</span><span>A2–B1</span></div>
+      <div class="barre"><i style="width:55%"></i></div>
+    </article>
+  </div>
+</section>
+
+<section id="passions">
+  <div class="kicker">04 / PASSIONS</div>
+  <h2>Ce qui me fait vibrer.</h2>
+  <div class="grille">
+    <article class="carte">
+      <div class="num">PASSION 01</div>
+      <h3>🚴‍♀️ Sport</h3>
+      <p>Vélo avec l’UCPG, triathlon, participation à l’étape du Tour de France jeunes 2024. Le bien-être par le sport comme fil conducteur.</p>
+    </article>
+    <article class="carte">
+      <div class="num">PASSION 02</div>
+      <h3>📚 Lecture</h3>
+      <p>Physique quantique et histoire des sciences : toujours envie de comprendre comment le monde fonctionne.</p>
+    </article>
+    <article class="carte">
+      <div class="num">PASSION 03</div>
+      <h3>🐾 Animaux</h3>
+      <p>Passionnée d’animaux, avec un projet de bénévolat en refuge.</p>
+    </article>
+  </div>
+  <blockquote>« Se dépasser, transmettre et avancer en équipe. »</blockquote>
+</section>
+
+<section id="contact">
+  <div class="contact">
+    <div class="kicker">05 / CONTACT</div>
+    <h2>Une question, un projet, un échange ?</h2>
+    <p>N’hésitez pas à m’écrire ou à m’appeler, avec grand plaisir ✨</p>
+    <div class="liens">
+      <a href="mailto:lenahospi@gmail.com">✉️ lenahospi@gmail.com</a>
+      <a href="tel:+33769930453">📞 07 69 93 04 53</a>
+    </div>
+  </div>
+</section>
+
+<footer>LÉNA HOSPITAL · CV NUMÉRIQUE · 2026 🌸</footer>
+
+<script>
+(function(){
+  var fond=document.querySelector('.fond'),max=.4,ticking=false;
+  function maj(){
+    var p=Math.min(window.scrollY/(window.innerHeight*0.7),1);
+    fond.style.opacity=(max*(1-p)).toFixed(3);
+    ticking=false;
+  }
+  window.addEventListener('scroll',function(){
+    if(!ticking){ticking=true;requestAnimationFrame(maj);}
+  },{passive:true});
+  maj();
+})();
+</script>
+</body>
+</html>
