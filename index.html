@@ -90,6 +90,27 @@ section>h2::after{content:" ✿";color:var(--rose);font-size:.7em}
 .barre{height:8px;background:var(--rose-l);border-radius:8px;margin-top:.25rem;overflow:hidden}
 .barre i{display:block;height:100%;border-radius:8px;background:linear-gradient(90deg,var(--rose),var(--lilas))}
 
+
+/* COURS PARTICULIERS */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1rem;margin-bottom:2rem}
+.stat{background:linear-gradient(135deg,var(--rose-l),var(--lilas-l));border-radius:24px;padding:1.2rem 1rem;text-align:center;border:1.5px solid var(--rose-l)}
+.stat b{display:block;font-family:'Playfair Display',serif;font-size:1.9rem;color:var(--rose-d);line-height:1.1}
+.stat span{font-size:.85rem;font-weight:600;color:var(--doux)}
+.intro{max-width:760px;margin-bottom:2rem;font-size:1.02rem}
+.matiere .picto{font-size:2rem}
+.matiere details{margin-top:.7rem;border-top:1.5px dashed var(--rose-l);padding-top:.6rem}
+.matiere summary{cursor:pointer;font-weight:700;font-size:.88rem;color:var(--rose-d);list-style:none}
+.matiere summary::-webkit-details-marker{display:none}
+.matiere summary::before{content:"＋ ";color:var(--lilas)}
+.matiere details[open] summary::before{content:"－ "}
+.matiere details ul{margin-top:.4rem}
+.matiere details li{font-size:.88rem}
+.methode{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin:2rem 0}
+.methode div{background:var(--blanc);border-radius:22px;padding:1.2rem 1.4rem;border:1.5px solid var(--rose-l);box-shadow:var(--ombre)}
+.methode b{display:block;color:var(--rose-d);margin-bottom:.2rem}
+.methode p{font-size:.9rem;color:var(--doux)}
+.cta{text-align:center;margin-top:1rem}
+
 /* CITATION + CONTACT */
 blockquote{margin:2.5rem 0 0;padding:1.6rem 2rem;border-radius:26px;background:linear-gradient(135deg,var(--rose-l),var(--lilas-l));font-family:'Playfair Display',serif;font-style:italic;font-size:1.2rem;text-align:center;color:var(--rose-d)}
 .contact{background:linear-gradient(135deg,var(--rose-l),var(--lilas-l));border-radius:34px;text-align:center;padding:3rem 1.5rem;margin:1rem auto 3rem;max-width:900px}
@@ -114,6 +135,7 @@ footer{text-align:center;padding:2rem 1rem 3rem;color:var(--doux);font-size:.82r
 <nav>
   <a class="logo" href="#top">Léna Hospital</a>
   <ul>
+    <li><a href="#cours">COURS</a></li>
     <li><a href="#profil">PROFIL</a></li>
     <li><a href="#parcours">PARCOURS</a></li>
     <li><a href="#competences">COMPÉTENCES</a></li>
@@ -145,8 +167,106 @@ footer{text-align:center;padding:2rem 1rem 3rem;color:var(--doux);font-size:.82r
   </div>
 </header>
 
+<section id="cours">
+  <div class="kicker">01 / COURS PARTICULIERS</div>
+  <h2>Un coup de pouce pour retrouver confiance.</h2>
+  <p class="intro">Je propose du soutien scolaire aux <strong>collégiens et lycéens en difficulté</strong> en mathématiques, français et physique-chimie. Mes résultats m’ont appris que les bonnes notes viennent d’une bonne méthode, et c’est exactement ce que j’ai envie de transmettre, avec patience et bienveillance.</p>
+
+  <div class="stats">
+    <div class="stat"><b>Très Bien</b><span>au baccalauréat général</span></div>
+    <div class="stat"><b>Très Bien</b><span>au brevet des collèges</span></div>
+    <div class="stat"><b>20 / 20</b><span>à l’écrit du bac de français</span></div>
+    <div class="stat"><b>19 / 20</b><span>à l’oral du bac de français</span></div>
+  </div>
+
+  <div class="grille">
+    <article class="carte matiere">
+      <div class="picto">📐</div>
+      <h3>Mathématiques</h3>
+      <p>Spécialité Maths au lycée, de la 6e à la Terminale.</p>
+      <details>
+        <summary>Collège (6e → 3e)</summary>
+        <ul>
+          <li>Fractions, nombres décimaux et relatifs, priorités de calcul</li>
+          <li>Proportionnalité, pourcentages, vitesses</li>
+          <li>Calcul littéral, équations, fonctions</li>
+          <li>Géométrie : aires, Pythagore, Thalès, trigonométrie</li>
+          <li>Statistiques, probabilités, initiation à l’algorithmique</li>
+        </ul>
+      </details>
+      <details>
+        <summary>Lycée (2de → Terminale)</summary>
+        <ul>
+          <li>Seconde : fonctions, vecteurs, droites, statistiques, Python</li>
+          <li>Première : second degré, dérivation, suites, trigonométrie, probabilités conditionnelles</li>
+          <li>Terminale : limites, continuité, exponentielle et logarithme, intégration, géométrie dans l’espace</li>
+        </ul>
+      </details>
+    </article>
+
+    <article class="carte matiere">
+      <div class="picto">✍️</div>
+      <h3>Français</h3>
+      <p>20/20 à l’écrit et 19/20 à l’oral du bac : je connais les attentes des correcteurs.</p>
+      <details>
+        <summary>Collège (6e → 3e)</summary>
+        <ul>
+          <li>Grammaire, conjugaison, orthographe, dictée</li>
+          <li>Rédaction et expression écrite</li>
+          <li>Lecture et compréhension de textes et d’œuvres</li>
+          <li>Préparation du brevet : questions sur texte, réécriture, rédaction</li>
+        </ul>
+      </details>
+      <details>
+        <summary>Lycée (2de → 1re)</summary>
+        <ul>
+          <li>Commentaire de texte et dissertation, étape par étape</li>
+          <li>Explication linéaire et préparation de l’oral</li>
+          <li>Entretien sur l’œuvre, fiches de révision, mouvements littéraires</li>
+          <li>Argumenter, structurer ses idées, soigner son style</li>
+        </ul>
+      </details>
+    </article>
+
+    <article class="carte matiere">
+      <div class="picto">🔬</div>
+      <h3>Physique-chimie</h3>
+      <p>Spécialité Physique-Chimie au lycée, pour comprendre au lieu d’apprendre par cœur.</p>
+      <details>
+        <summary>Collège (5e → 3e)</summary>
+        <ul>
+          <li>Matière : états, mélanges, transformations chimiques</li>
+          <li>Électricité : circuits, tension, intensité</li>
+          <li>Mouvement, forces, énergie</li>
+          <li>Signaux : lumière et son</li>
+        </ul>
+      </details>
+      <details>
+        <summary>Lycée (2de → Terminale)</summary>
+        <ul>
+          <li>Seconde : constitution de la matière, mole, mouvement et interactions, ondes</li>
+          <li>Première : concentration et dosages, oxydoréduction, énergie, mouvement, ondes</li>
+          <li>Terminale : acides et bases, cinétique, lois de Newton, ondes, thermodynamique</li>
+        </ul>
+      </details>
+    </article>
+  </div>
+
+  <div class="methode">
+    <div><b>1 · On fait le point</b><p>Repérer ensemble les notions qui bloquent et les lacunes à combler.</p></div>
+    <div><b>2 · On construit une méthode</b><p>Comprendre, s’entraîner, s’organiser : des outils qui servent dans toutes les matières.</p></div>
+    <div><b>3 · On avance avec confiance</b><p>Des progrès visibles, un rythme adapté et des encouragements pour reprendre goût à l’école.</p></div>
+  </div>
+
+  <p class="intro">Habituée à encadrer des jeunes (bénévole en club de triathlon, brevet BF1, maître-nageuse sauveteur), j’ai l’habitude d’expliquer, de rassurer et de motiver.</p>
+
+  <div class="cta">
+    <a class="btn plein" href="#contact">Demander un cours</a>
+  </div>
+</section>
+
 <section id="profil">
-  <div class="kicker">01 / PROFIL</div>
+  <div class="kicker">02 / PROFIL</div>
   <h2>Sport, sciences et engagement.</h2>
   <div class="grille">
     <article class="carte">
@@ -187,7 +307,7 @@ footer{text-align:center;padding:2rem 1rem 3rem;color:var(--doux);font-size:.82r
 </section>
 
 <section id="parcours">
-  <div class="kicker">02 / PARCOURS</div>
+  <div class="kicker">03 / PARCOURS</div>
   <h2>Un chemin tracé pas à pas.</h2>
   <div class="timeline">
 
@@ -254,7 +374,7 @@ footer{text-align:center;padding:2rem 1rem 3rem;color:var(--doux);font-size:.82r
 </section>
 
 <section id="competences" class="matrice">
-  <div class="kicker">03 / COMPÉTENCES</div>
+  <div class="kicker">04 / COMPÉTENCES</div>
   <h2>Mes atouts.</h2>
   <div class="grille">
     <article class="carte">
@@ -284,7 +404,7 @@ footer{text-align:center;padding:2rem 1rem 3rem;color:var(--doux);font-size:.82r
 </section>
 
 <section id="passions">
-  <div class="kicker">04 / PASSIONS</div>
+  <div class="kicker">05 / PASSIONS</div>
   <h2>Ce qui me fait vibrer.</h2>
   <div class="grille">
     <article class="carte">
@@ -308,7 +428,7 @@ footer{text-align:center;padding:2rem 1rem 3rem;color:var(--doux);font-size:.82r
 
 <section id="contact">
   <div class="contact">
-    <div class="kicker">05 / CONTACT</div>
+    <div class="kicker">06 / CONTACT</div>
     <h2>Une question, un projet, un échange ?</h2>
     <p>N’hésitez pas à m’écrire ou à m’appeler, avec grand plaisir ✨</p>
     <div class="liens">
